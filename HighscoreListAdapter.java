@@ -42,8 +42,9 @@ public class HighscoreListAdapter extends ArrayAdapter<Highscore> {
         TextView txt_rank_list = (TextView) convertView.findViewById(R.id.txt_rank_list);
         TextView txt_name_list = (TextView) convertView.findViewById(R.id.txt_name_list);
         TextView txt_score_list = (TextView) convertView.findViewById(R.id.txt_score_list);
+        int rank = position+1;
 
-        txt_rank_list.setText(""+(position+1));
+        txt_rank_list.setText(""+rank);
         txt_name_list.setText(name);
         txt_score_list.setText(""+score);
 

@@ -19,7 +19,7 @@ import java.util.List;
 
 public class ScoreBoardActivity extends AppCompatActivity implements View.OnClickListener, RequestNameDialog.RequestNameDialogListener{
 
-    private TextView txt_result, buffer;
+    private TextView txt_result;
     private Button button_play_again, button_highscore_result, button_main_menu;
     private int difficult;
     private HighscoreDataSource dataSource;
@@ -40,7 +40,6 @@ public class ScoreBoardActivity extends AppCompatActivity implements View.OnClic
         dataSource = new HighscoreDataSource(this);
 
         txt_result = (TextView) findViewById(R.id.txt_result);
-        buffer = (TextView) findViewById(R.id.buffer);
         button_play_again = (Button) findViewById(R.id.button_play_again);
         button_highscore_result = (Button) findViewById(R.id.button_highscore_result);
         button_main_menu = (Button) findViewById(R.id.button_main_menu);
@@ -60,10 +59,6 @@ public class ScoreBoardActivity extends AppCompatActivity implements View.OnClic
         if(dataSource.checkHighscore(score)==true){
             openDialog();
         }
-//        name = buffer.getText().toString();
-//        dataSource.createHighscore(name,score);
-
-
 
     }
 
